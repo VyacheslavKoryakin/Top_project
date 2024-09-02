@@ -1,9 +1,13 @@
 
+
 import java.util.*;
+
+import java.net.SocketOption;>>>>>>> master
 
 public class Main {
     static final String FINISH_LESSON = "Finish lesson";
     public static void main(String[] args) {
+<<<<<< future-3
 
 
 
@@ -73,6 +77,34 @@ public class Main {
         long longVal = 2_560_483_649L;
         int intVal = (int) longVal;
         System.out.println("Значение переполненой переменной intVal = " + intVal);
+
+        byte myByte = 10;
+        short myShort = 10;
+        int myInt = 45;
+        long myLong = 15L;
+        float myFloat = 3.07f;
+        double myDouble = 3.07;
+        char myChar = 'b';
+        boolean myBoolean = true;
+
+        int myInt2 = 13;
+
+        int sum = myInt + myInt2;
+        System.out.println("Сложение: " + sum);
+
+        int difference = myInt - myInt2;
+        System.out.println("Вычитание: " + difference);
+
+        int product = myInt * myInt2;
+        System.out.println("Умножение: " + product);
+
+        int quotient = myInt / myInt2;
+        System.out.println("Деление: " + quotient);
+
+        int remainder = myInt % myInt2;
+        System.out.println("Остаток от деления: " + remainder);
+
+>>>>>> master
     }
 }
 
