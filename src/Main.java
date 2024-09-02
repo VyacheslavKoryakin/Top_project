@@ -2,12 +2,10 @@
 
 import java.util.*;
 
-import java.net.SocketOption;>>>>>>> master
 
 public class Main {
     static final String FINISH_LESSON = "Finish lesson";
     public static void main(String[] args) {
-<<<<<< future-3
 
 
 
@@ -78,6 +76,10 @@ public class Main {
         int intVal = (int) longVal;
         System.out.println("Значение переполненой переменной intVal = " + intVal);
 
+
+
+
+
         byte myByte = 10;
         short myShort = 10;
         int myInt = 45;
@@ -104,7 +106,7 @@ public class Main {
         int remainder = myInt % myInt2;
         System.out.println("Остаток от деления: " + remainder);
 
->>>>>> master
+
     }
 }
 
