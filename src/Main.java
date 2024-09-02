@@ -3,11 +3,9 @@
 import java.util.*;
 
 
-
 public class Main {
     static final String FINISH_LESSON = "Finish lesson";
     public static void main(String[] args) {
-
 
 
 
@@ -79,6 +77,34 @@ public class Main {
         System.out.println("Значение переполненой переменной intVal = " + intVal);
 
 
+
+
+
+        byte myByte = 10;
+        short myShort = 10;
+        int myInt = 45;
+        long myLong = 15L;
+        float myFloat = 3.07f;
+        double myDouble = 3.07;
+        char myChar = 'b';
+        boolean myBoolean = true;
+
+        int myInt2 = 13;
+
+        int sum = myInt + myInt2;
+        System.out.println("Сложение: " + sum);
+
+        int difference = myInt - myInt2;
+        System.out.println("Вычитание: " + difference);
+
+        int product = myInt * myInt2;
+        System.out.println("Умножение: " + product);
+
+        int quotient = myInt / myInt2;
+        System.out.println("Деление: " + quotient);
+
+        int remainder = myInt % myInt2;
+        System.out.println("Остаток от деления: " + remainder);
 
 
     }
