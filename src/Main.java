@@ -5,9 +5,7 @@ public class Main {
     static final String FINISH_LESSON = "Finish lesson";
     public static void main(String[] args) {
 
-        /** данный код принимает 3 целочисленных значения из кансоли
-         * производит математические операции и выводит результат в консоль
-         * */
+
 
         Scanner sc = new Scanner(System.in);
 
@@ -31,8 +29,7 @@ public class Main {
         System.out.println("\n\n");
 
 
-        /** данный код выводит в кансоль значение переполненого байта
-         */
+
 
         int myInt = 130;
         byte myByte = (byte) myInt;
@@ -54,9 +51,7 @@ public class Main {
         System.out.println("\n\n");
 
 
-        /** данный код получает рандомные целочисленные значения, приводит их к типу char
-         * и выводит в консоль в одну строку
-         */
+
 
         Random random = new Random();
 
@@ -73,8 +68,7 @@ public class Main {
         System.out.println("\n\n");
 
 
-        /** данный код выводит переполненное значение целочисленного числа типа int
-         */
+
 
         long longVal = 2_560_483_649L;
         int intVal = (int) longVal;
