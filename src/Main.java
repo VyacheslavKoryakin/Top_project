@@ -1,9 +1,13 @@
 
+
 import java.util.*;
+
+
 
 public class Main {
     static final String FINISH_LESSON = "Finish lesson";
     public static void main(String[] args) {
+
 
 
 
@@ -73,6 +77,10 @@ public class Main {
         long longVal = 2_560_483_649L;
         int intVal = (int) longVal;
         System.out.println("Значение переполненой переменной intVal = " + intVal);
+
+
+
+
     }
 }
 
