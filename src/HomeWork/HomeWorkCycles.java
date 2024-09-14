@@ -2,7 +2,7 @@ package HomeWork;
 
 import java.util.Scanner;
 
-public class Cycles {
+public class HomeWorkCycles {
     public static void main(String[] args) {
         // задание №1
         outputOddNumbers();
