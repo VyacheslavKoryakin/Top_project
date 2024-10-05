@@ -22,9 +22,19 @@ public class Main {
         System.out.println("\n");
 
         //Задание 3
-        String[] strArray = {"some string", " ", "2134", "java", ""};
-        System.out.println(Arrays.toString(Methods.cornerValuesArray(strArray)));
+        String string2 = "это длинная строка";
+        System.out.println(Arrays.toString(Methods.cornerValuesArray("some string", string2, "n", "2134", "java")));
+
+        System.out.println("\n");
+
+        int number2 = 12;
+        System.out.println(Arrays.toString(Methods.cornerValuesArray(1, 17, number2, -9, 88)));
 
 
+        System.out.println("\n");
+
+
+        char symbol = 'a';
+        System.out.println(Arrays.toString(Methods.cornerValuesArray('g', 'S', '1', 'J', symbol, 'b')));
     }
 }
