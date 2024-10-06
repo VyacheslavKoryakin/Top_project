@@ -85,7 +85,8 @@ public class Methods {
      *
      * @param symbol int
      * @return array int
-     */ static char[] cornerValuesArray(char... symbol) {
+     */
+    static char[] cornerValuesArray(char... symbol) {
         int maxCharValue = Integer.MIN_VALUE;
         int minCharValue = Integer.MAX_VALUE;
         char maxCharInArray = 0;

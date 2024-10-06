@@ -27,6 +27,7 @@ public class Main {
 
         System.out.println("\n");
 
+
         int number2 = 12;
         System.out.println(Arrays.toString(Methods.cornerValuesArray(1, 17, number2, -9, 88)));
 
