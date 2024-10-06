@@ -36,75 +36,115 @@ public class Methods {
         int minStringLength = Integer.MAX_VALUE;
         String maxStringInArray = "";
         String minStringInArray = "";
+        if (string.length == 0) {
+            printArrayLengthError();
+            return string;
+        } else {
+            for (String s : string) {
+                if (s.length() < minStringLength) {
+                    minStringLength = s.length();
+                    minStringInArray = s;
+                }
+                if (s.length() > maxStringLength) {
+                    maxStringLength = s.length();
+                    maxStringInArray = s;
+                }
+            }
 
-        for (String s : string) {
-            if (s.length() < minStringLength) {
-                minStringLength = s.length();
-                minStringInArray = s;
-            }
-            if (s.length() > maxStringLength) {
-                maxStringLength = s.length();
-                maxStringInArray = s;
-            }
+            String[] resultArray = {maxStringInArray, minStringInArray};
+            return resultArray;
         }
-
-        String[] resultArray = {maxStringInArray, minStringInArray};
-        return resultArray;
-
     }
 
     /**
-     * Метод принимает целые числа и
+     * Метод принимает целые числа или массив целых чисел и
      * возвращает массивом наибольшее и наименьшее числа
      *
-     * @param number int
+     * @param number int или int[]
      * @return array int
      */
     static int[] cornerValuesArray(int... number) {
+
         int maxIntValue = Integer.MIN_VALUE;
         int minIntValue = Integer.MAX_VALUE;
+        if (number.length == 0) {
+            printArrayLengthError();
+            return number;
+        } else {
+            for (int i : number) {
+                if (i < minIntValue) {
+                    minIntValue = i;
+                }
+                if (i > maxIntValue) {
+                    maxIntValue = i;
+                }
+            }
 
-        for (int i : number) {
-            if (i < minIntValue) {
-                minIntValue = i;
-            }
-            if (i > maxIntValue) {
-                maxIntValue = i;
-            }
+            int[] resultArray = {maxIntValue, minIntValue};
+            return resultArray;
         }
-
-        int[] resultArray = {maxIntValue, minIntValue};
-        return resultArray;
-
 
     }
 
     /**
-     * Метод принимает символы и
+     * Метод принимает символы или массив символов и
      * возвращает массивом наибольший и наименьший символы
      *
      * @param symbol int
      * @return array int
-     */ static char[] cornerValuesArray(char... symbol) {
-        int maxCharValue = Integer.MIN_VALUE;
-        int minCharValue = Integer.MAX_VALUE;
+     */
+    static char[] cornerValuesArray(char... symbol) {
+
         char maxCharInArray = 0;
         char minCharInArray = 0;
 
-        for (char c : symbol) {
-            if (c < minCharValue) {
-                minCharValue = c;
-                minCharInArray = c;
+        if (symbol.length == 0) {
+            printArrayLengthError();
+            return symbol;
+        } else {
+            int maxCharValue = Integer.MIN_VALUE;
+            int minCharValue = Integer.MAX_VALUE;
+            for (char c : symbol) {
 
+                if (c < minCharValue) {
+                    minCharValue = c;
+                    minCharInArray = c;
+
+                }
+                if (c > maxCharValue) {
+                    maxCharValue = c;
+                    maxCharInArray = c;
+                }
             }
-            if (c > maxCharValue) {
-                maxCharValue = c;
-                maxCharInArray = c;
-            }
+
+
+            char[] resultArray = {maxCharInArray, minCharInArray};
+            return resultArray;
         }
+    }
 
-        char[] resultArray = {maxCharInArray, minCharInArray};
-        return resultArray;
 
+    /**
+     * метод вывод сообщение на консоль
+     * метод не принимает значений.
+     */
+    static void printArrayLengthError() {
+        System.out.println("Вы ввели пустой массив");
+    }
+
+
+    /**
+     * Метод принимает значение типа int и взвращает его факториал
+     *
+     * @param number int
+     * @return факториал числа number
+     */
+
+    static long getFactorial(long number) {
+        if (number == 1) {
+            return 1;
+        } else {
+            return number * getFactorial(number - 1);
+        }
     }
 }
