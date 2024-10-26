@@ -1,7 +1,5 @@
 package HomeWorkOOP;
 
-import HomeWorkOOP.*;
-
 
 public class Book {
 
@@ -10,10 +8,20 @@ public class Book {
     private String title;
     private Integer year;
 
+    public Book() {
+
+    }
+
+    public Book(Author author, String title, Integer year) {
+        this.author = author;
+        this.year = year;
+        this.title = title;
+    }
 
     public Author getAuthor() {
         return author;
     }
+
 
     public void setAuthor(Author author) {
         this.author = author;
@@ -36,8 +44,13 @@ public class Book {
         this.year = year;
     }
 
-    public String getInfo() {
-        return title + " " + author.getInfo() + " " + year;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author=" + author.toString() +
+                ", title='" + title + '\'' +
+                ", year=" + year +
+                '}';
     }
 }
 

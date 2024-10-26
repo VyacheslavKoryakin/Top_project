@@ -5,12 +5,22 @@ public class Author {
     private String name;
     private String surname;
 
+    public Author() {
+
+    }
+
+    public Author(String name, String surname) {
+        this.name = name;
+        this.surname = surname;
+
+    }
+
     public String getName() {
         return name;
     }
 
-    public String setName(String name) {
-        return this.name = name;
+    public void setName(String name) {
+        this.name = name;
 
     }
 
@@ -22,7 +32,9 @@ public class Author {
         this.surname = surname;
     }
 
-    public String getInfo() {
+    @Override
+    public String toString() {
         return name + " " + surname;
+
     }
 }
