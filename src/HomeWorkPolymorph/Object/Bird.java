@@ -1,11 +1,8 @@
 package HomeWorkPolymorph.Object;
 
-public class Bird extends Animal {
+public class Bird extends Animal  {
     private boolean isFly;
 
-    public Bird(String name) {
-        super(name);
-    }
 
     public Bird(String name, boolean isFly) {
         super(name);
@@ -28,6 +25,11 @@ public class Bird extends Animal {
     @Override
     public void eat() {
         System.out.println("Птица " + getName() + " ест червячков");
+    }
+
+    @Override
+    public void move() {
+        getFly();
     }
 
     /**

@@ -1,8 +1,8 @@
 package HomeWorkPolymorph.Object;
 
-public class Animal {
+public abstract class  Animal  {
 
-    private String name;
+     private String name;
 
     public Animal(String name) {
         this.name = name;
@@ -21,15 +21,21 @@ public class Animal {
      * Метод не принимает значений.
      * Метод вывод в консоль звук животного.
      */
-    public void makeSound() {
+    public abstract void makeSound();
 
-    }
+
 
     /**
      * Метод вывод в консоль информацию
      * чем питается животное
      */
-    public void eat() {
+    public abstract void eat();
 
-    }
+
+    /**
+     * Метод вывод в консоль информацию о
+     * том как двигается животное
+     */
+    public abstract void move();
+
 }
