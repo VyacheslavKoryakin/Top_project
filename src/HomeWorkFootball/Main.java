@@ -1,44 +1,41 @@
 package HomeWorkFootball;
 
+import HomeWorkFootball.Object.Game;
 import HomeWorkFootball.Object.Player;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        boolean gameIsRunning = true;
-
-        Player player1 = new Player(" player1");
-        Player.getPlayerCount();
-
-        Player player2 = new Player(" player2");
-        Player.getPlayerCount();
-
-        Player player3 = new Player(" player3");
-        Player.getPlayerCount();
-
-        Player player4 = new Player(" player4");
-        Player.getPlayerCount();
-
-        Player player5 = new Player(" player5");
-        Player.getPlayerCount();
-
-        Player player6 = new Player(" player6");
-        Player.getPlayerCount();
-
-        Player player7 = new Player(" player7");
-        Player.getPlayerCount();
-
-        Player player8 = new Player(" player8");
-        Player.getPlayerCount();
+        Game game = new Game();
+        while (Game.players.size() < 6) {
+            game.addPlayer();
+            System.out.println("В списке игроков " + Game.players.size() + " элементов.");
+        }
 
         System.out.println();
-        Player[] players = {player1, player2, player3, player4, player5, player6, player7, player8};
-        while (gameIsRunning) {
 
+        while (!Game.players.isEmpty()) {
+            m1:
+            for (Player player : Game.players) {
+                System.out.println(player + " " + player.getPlayerStamina());
+                if (game.checkPlayerName(player)) {
+                    System.out.println("Игрок " + player + " играет в поле");
+                    player.run();
+                    System.out.println("В списке игроков " + Game.players.size() + " элементов.");
+                    game.getInfo();
+                    System.out.println(Game.players.toString());
+                } else {
+                    System.out.println("Игрок " + player + " отсутсвует на поле");
+                }
 
-            Player.getMethods(players, gameIsRunning);
-
-            gameIsRunning = Player.getMethods(players, gameIsRunning);
+                if (player.getPlayerStamina() <= 0) {
+                    game.addPlayer();
+                    break m1;
+                }
+                System.out.println();
+            }
         }
+        game.gameEnd();
     }
 }
