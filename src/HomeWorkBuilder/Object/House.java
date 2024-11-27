@@ -1,5 +1,7 @@
 package HomeWorkBuilder.Object;
 
+import java.util.Objects;
+
 public class House {
     private Integer floor;
     private Integer room;
@@ -47,6 +49,18 @@ public class House {
         public House builder() {
             return new House(this);
         }
+    }
 
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null || getClass() != object.getClass()) return false;
+        House house = (House) object;
+        return garage == house.garage && Objects.equals(floor, house.floor) && Objects.equals(room, house.room);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(floor, room, garage);
     }
 }
