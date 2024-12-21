@@ -34,6 +34,7 @@ public class Book {
         return "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", isAvailable=" + isAvailable;
+
     }
 }
 

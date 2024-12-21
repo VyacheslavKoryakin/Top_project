@@ -35,8 +35,6 @@ public class Main {
         System.out.println(countAvailableBook(true)+" доступных книг в библиотеке");
         System.out.println(countAvailableBook(false)+" не доступных книг в библиотеке");
         for (Book book : books) {
-
-
             System.out.println(getFilteredBook(book.getAuthor(),book));
         }
 
