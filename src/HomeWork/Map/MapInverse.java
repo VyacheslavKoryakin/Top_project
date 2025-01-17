@@ -13,6 +13,7 @@ public class MapInverse  {
         System.out.println(map);
         System.out.println(inerseMap(map));
 
+
     }
 
     public static LinkedHashMap<String, Integer> inerseMap(LinkedHashMap<Integer, String> map) {

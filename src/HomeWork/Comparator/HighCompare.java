@@ -8,6 +8,7 @@ public class HighCompare implements Comparator<HighWeight> {
 HighWeight high;
 
     public HighCompare() {
+
     }
 
     @Override

@@ -13,6 +13,7 @@ public class HighWeight {
 
 
     public int getHigh() {
+
         return high;
     }
 

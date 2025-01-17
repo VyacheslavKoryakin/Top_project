@@ -26,5 +26,6 @@ HighWeight weight;
     @Override
     public int compare(HighWeight o1, HighWeight o2) {
         return Integer.compare(o1.getWeight(), o2.getWeight());
+
     }
 }

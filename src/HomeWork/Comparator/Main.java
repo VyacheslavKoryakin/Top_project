@@ -23,6 +23,7 @@ public class Main {
         list.sort(new HighCompare());
         System.out.println(list);
 
+
     }
 
 }
